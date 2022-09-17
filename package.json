@@ -1,0 +1,67 @@
+{
+  "name": "nnjc-layout",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "den3606",
+    "email": "dedendendedenpunn@gmail.com",
+    "url": ""
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^1.1.1",
+    "dashboardPanels": [
+      {
+        "name": "PlayerSelect",
+        "title": "PlayerSelect",
+        "width": 4,
+        "file": "playerSelect.html",
+        "headerColor": "#525F78"
+      },
+      {
+        "name": "PlayerListUploader",
+        "title": "PlayerListUploader",
+        "width": 4,
+        "file": "playerListUploader.html",
+        "headerColor": "#525F78"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "index.html",
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "assetCategories": [
+      {
+        "name": "playerList",
+        "title": "PlayerList",
+        "allowedTypes": [
+          "csv"
+        ]
+      }
+    ]
+  },
+  "repository": "https://github.com/nodecg/nodecg.git",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "csv": "^6.2.0",
+    "csv-parse": "^5.3.0"
+  }
+}
