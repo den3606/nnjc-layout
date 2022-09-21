@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "NoitaFont";
+  src: url("../resources/fonts/NOITABLACKLETTER-REGULAR.TTF");
+}
+
+body {
+  font-family: MyFont;
+  width: 1920px;
+  height: 1080px;
+}
+
+* {
+  color: white;
+  position: absolute;
+  font-family: NoitaFont;
+}
+
+body {
+  background-image: url("../resources/images/background.png");
+}
+
+.capture-container {
+  margin-top: 80px;
+  margin-left: 33px;
+  width: 1856px;
+  height: 1072px;
+}
+
+.left-player-container {
+  background-image: url("../resources/images/left-display.png");
+  width: 916px;
+  height: 1072px;
+}
+
+.right-player-container {
+  background-image: url("../resources/images/right-display.png");
+  width: 916px;
+  height: 1072px;
+  right: 0;
+}
+
+.player-name {
+  margin-top: 5px;
+  margin-left: 15px;
+  font-size: 45px;
+}
+
+.player-name::before {
+  margin-right: 10px;
+}
+
+.left-player-name::before {
+  content: url("../resources/images/elk.png");
+}
+
+.right-player-name::before {
+  content: url("../resources/images/elk.png");
+}
+
+.score-board {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  margin-bottom: 70px;
+  width: 500px;
+  font-size: 120px;
+  text-align:center;
+}
+
+.score-board-point {
+  position: relative;
+}
+
+.text-noita {
+  font-weight: bold;
+  background: linear-gradient(#ffd170, #ac4b5d);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
