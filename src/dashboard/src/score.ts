@@ -33,3 +33,11 @@ if (!rightPlayerMinusElement) { throw new Error('selector not found'); }
 rightPlayerMinusElement.addEventListener('click', () => {
   rightPlayerScoreReplicant.value = Number(rightPlayerScoreReplicant.value) - 1;
 });
+
+// 初期化
+const scoreResetElement = document.querySelector<HTMLButtonElement>('#reset-player-score');
+if (!scoreResetElement) { throw new Error('selector not found'); }
+scoreResetElement.addEventListener('click', () => {
+  leftPlayerScoreReplicant.value = 0;
+  rightPlayerScoreReplicant.value = 0;
+});
