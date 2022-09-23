@@ -3,8 +3,12 @@
   src: url("../resources/fonts/NOITABLACKLETTER-REGULAR.TTF");
 }
 
+@font-face {
+  font-family: "PixelMplus12RegularFont";
+  src: url("../resources/fonts/PixelMplus12-Regular.ttf");
+}
+
 body {
-  font-family: MyFont;
   width: 1920px;
   height: 1080px;
 }
@@ -12,7 +16,7 @@ body {
 * {
   color: white;
   position: absolute;
-  font-family: NoitaFont;
+  font-family: PixelMplus12RegularFont;
 }
 
 body {
@@ -40,7 +44,7 @@ body {
 }
 
 .player-name {
-  margin-top: 5px;
+  margin-top: 2px;
   margin-left: 15px;
   font-size: 45px;
 }
@@ -54,7 +58,7 @@ body {
 }
 
 .right-player-name::before {
-  content: url("../resources/images/elk.png");
+  content: url("../resources/images/duck.png");
 }
 
 .score-board {
