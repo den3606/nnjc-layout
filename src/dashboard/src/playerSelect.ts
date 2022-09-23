@@ -1,4 +1,5 @@
 import './styles/style.css';
+import csvToJson from 'csvtojson';
 
 const leftNameReplicant = nodecg.Replicant<string>('leftPlayerName');
 const leftPlayerNameElement = document.querySelector<HTMLSelectElement>('#left-player-name');
@@ -25,18 +26,53 @@ rightNameReplicant.on('change', ((newValue: string) => {
 }));
 
 
+type Assets = {
+  base: string;
+  category: string;
+  ext: string;
+  name: string;
+  namespace: string;
+  sum: string;
+  url: string;
+};
 
-// jsonファイル一覧取得のソース
-// const players = await async function () {
-//   const e = await fetch("./playerList.json");
-//   return (await e.json()).players
-// }();
-// nameReplicant.value = players[0]
+const loadPlayersFromCSVElement = document.querySelector<HTMLButtonElement>('#load-players-from-csv');
+if (!loadPlayersFromCSVElement) { throw new Error('selector not found'); }
+loadPlayersFromCSVElement.addEventListener('click', async () => {
+  const isArray = <T>(maybeArray: T | readonly T[]): maybeArray is T[] => {
+    return Array.isArray(maybeArray);
+  };
 
-// csvファイルの内容を読み込み
-// csvファイルをパース
-// const records = parse(data, { columns: true });
-// 結果の表示
-// for (const record of records) {
-//   console.log(record);
-// }
+  const assets = nodecg.Replicant<Assets[]>('assets:playerList').value;
+  if (!isArray(assets)) {
+    alert('csvファイルをアップロードしてください');
+    return;
+  }
+  const csvData = await fetch(assets[0].url).then(data => data.text());
+  console.log(csvData);
+
+  const jsonArray = await csvToJson({ noheader: true }).fromString(csvData);
+  const playerNames = jsonArray.filter(json => json.field11 === '参加枠').map(json => json.field3);
+  const optionElements = playerNames.map(playerName => {
+    const optionElement = document.createElement('option');
+    optionElement.text = playerName;
+    optionElement.value = playerName;
+    return optionElement;
+  });
+
+  const leftPlayerNameElement = document.querySelector<HTMLSelectElement>('#left-player-name');
+  if (!leftPlayerNameElement) { throw new Error('selector not found'); }
+  const rightPlayerNameElement = document.querySelector<HTMLSelectElement>('#right-player-name');
+  if (!rightPlayerNameElement) { throw new Error('selector not found'); }
+
+
+  leftPlayerNameElement.textContent = '';
+  rightPlayerNameElement.textContent = '';
+  leftPlayerNameElement.insertAdjacentElement('beforeend', document.createElement('option'));
+  rightPlayerNameElement.insertAdjacentElement('beforeend', document.createElement('option'));
+  optionElements.forEach(element => {
+    leftPlayerNameElement.insertAdjacentElement('beforeend', element);
+    const clone = <HTMLOptionElement>element.cloneNode(true);
+    rightPlayerNameElement.insertAdjacentElement('beforeend', clone);
+  });
+});

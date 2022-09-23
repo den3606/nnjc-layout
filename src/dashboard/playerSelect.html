@@ -11,14 +11,18 @@
     <div class="mt-2">
       <label>左側のプレイヤー</label>
       <select id="left-player-name" name="left-player-name" class="form-select" aria-label="Default select">
-        <option value="noita">noita</option>
+        <option value="" selected></option>
       </select>
     </div>
     <div class="mt-2">
       <label>右側のプレイヤー</label>
       <select id="right-player-name" name="right-player-name" class="form-select" aria-label="Default select">
-        <option value="noita">noita</option>
+        <option value="" selected></option>
       </select>
+    </div>
+    <div class="mt-4">
+      <button id="load-players-from-csv" type="button" class="btn btn-outline-secondary">プレイヤーをCSVから読み込む</button>
+      <p class="text text-secondary mt-1">Assetsにアップロードした、<br>TonamelのCSVよりプレイヤーを読み込みます</p>
     </div>
   </div>
 </body>
