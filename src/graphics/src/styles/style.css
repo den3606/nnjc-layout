@@ -62,18 +62,20 @@ body {
 }
 
 .score-board {
+  font-family: NoitaFont;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   width: 500px;
-  font-size: 120px;
+  font-size: 150px;
   text-align:center;
 }
 
 .score-board-point {
   position: relative;
+  font-family: inherit;
 }
 
 .text-noita {
