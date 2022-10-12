@@ -1,12 +1,21 @@
 import './styles/style.css';
 import csvToJson from 'csvtojson';
 
+type PlayerInfo = {
+  name: string,
+  comment: string
+}
+let playersInfo = <Array<PlayerInfo>>[];
+
 const leftNameReplicant = nodecg.Replicant<string>('leftPlayerName');
+const leftCommentReplicant = nodecg.Replicant<string>('leftPlayerComment');
 const leftPlayerNameElement = document.querySelector<HTMLSelectElement>('#left-player-name');
 if (!leftPlayerNameElement) { throw new Error('selector not found'); }
 
 leftPlayerNameElement.addEventListener('change', (event) => {
-  leftNameReplicant.value = (<HTMLSelectElement>event.target).value;
+  const playerName = (<HTMLSelectElement>event.target).value;
+  leftNameReplicant.value = playerName;
+  leftCommentReplicant.value = playersInfo.filter(player => player.name == playerName)[0]?.comment || '';
 });
 
 leftNameReplicant.on('change', ((newValue: string) => {
@@ -14,11 +23,14 @@ leftNameReplicant.on('change', ((newValue: string) => {
 }));
 
 const rightNameReplicant = nodecg.Replicant<string>('rightPlayerName');
+const rightCommentReplicant = nodecg.Replicant<string>('rightPlayerComment');
 
 const rightPlayerNameElement = document.querySelector<HTMLSelectElement>('#right-player-name');
 if (!rightPlayerNameElement) { throw new Error('selector not found'); }
 rightPlayerNameElement.addEventListener('change', (event) => {
-  rightNameReplicant.value = (<HTMLSelectElement>event.target).value;
+  const playerName = (<HTMLSelectElement>event.target).value;
+  rightNameReplicant.value = playerName;
+  rightCommentReplicant.value = playersInfo.filter(player => player.name == playerName)[0]?.comment || '';
 });
 
 rightNameReplicant.on('change', ((newValue: string) => {
@@ -49,14 +61,17 @@ loadPlayersFromCSVElement.addEventListener('click', async () => {
     return;
   }
   const csvData = await fetch(assets[0].url).then(data => data.text());
-  console.log(csvData);
+  console.table(csvData);
 
   const jsonArray = await csvToJson({ noheader: true }).fromString(csvData);
-  const playerNames = jsonArray.filter(json => json.field11 === '参加枠').map(json => json.field3);
-  const optionElements = playerNames.map(playerName => {
+  const participants = jsonArray.filter(json => json.field11 === '参加枠');
+  playersInfo = participants.map(json => {
+    return { 'name': json.field3, 'comment': json.field5 };
+  });
+  const optionElements = playersInfo.map(player => {
     const optionElement = document.createElement('option');
-    optionElement.text = playerName;
-    optionElement.value = playerName;
+    optionElement.text = player.name;
+    optionElement.value = player.name;
     return optionElement;
   });
 
