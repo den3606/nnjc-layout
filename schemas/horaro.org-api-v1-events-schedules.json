@@ -1,0 +1,132 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "timezone": {
+            "type": "string"
+          },
+          "start": {
+            "type": "string"
+          },
+          "start_t": {
+            "type": "number"
+          },
+          "website": {
+            "type": "string"
+          },
+          "twitter": {
+            "type": "string"
+          },
+          "twitch": {
+            "type": "string"
+          },
+          "description": {
+            "type": "null"
+          },
+          "setup": {
+            "type": "string"
+          },
+          "setup_t": {
+            "type": "number"
+          },
+          "updated": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          },
+          "columns": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "length": {
+                  "type": "string"
+                },
+                "length_t": {
+                  "type": "number"
+                },
+                "scheduled": {
+                  "type": "string"
+                },
+                "scheduled_t": {
+                  "type": "number"
+                },
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "length",
+                "length_t",
+                "scheduled",
+                "scheduled_t",
+                "data"
+              ]
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rel": {
+                  "type": "string"
+                },
+                "uri": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "rel",
+                "uri"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "slug",
+          "timezone",
+          "start",
+          "start_t",
+          "website",
+          "twitter",
+          "twitch",
+          "description",
+          "setup",
+          "setup_t",
+          "updated",
+          "link",
+          "columns",
+          "items",
+          "links"
+        ]
+      }
+    }
+  }
+}

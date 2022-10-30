@@ -8,6 +8,32 @@
   src: url("../resources/fonts/PixelMplus12-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Inspiration-Regular";
+  src: url("../resources/fonts/Inspiration-Regular.ttf");
+}
+
+@font-face {
+  font-family: "TurretRoad-EB";
+  src: url("../resources/fonts/TurretRoad-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "TurretRoad-B";
+  src: url("../resources/fonts/TurretRoad-Bold.ttf");
+}
+@font-face {
+  font-family: "TurretRoad-R";
+  src: url("../resources/fonts/TurretRoad-Regular.ttf");
+}
+@font-face {
+  font-family: "TurretRoad-L";
+  src: url("../resources/fonts/TurretRoad-Light.ttf");
+}
+@font-face {
+  font-family: "TurretRoad-EL";
+  src: url("../resources/fonts/TurretRoad-ExtraLight.ttf");
+}
+
 body {
   width: 1920px;
   height: 1080px;
@@ -17,7 +43,6 @@ body {
 
 * {
   color: white;
-  position: absolute;
   font-family: PixelMplus12RegularFont;
 }
 
@@ -26,6 +51,7 @@ body {
   border-style: solid;
   border-color: rgba(140, 121, 95);
   box-sizing: border-box;
+  background-color: rgba(27, 22, 27, 0.637);
 }
 
 .noita-text {
@@ -37,117 +63,10 @@ body {
   /* vertical-align: top; */
 }
 
-.medium-font-size {
+.big-font-size {
   font-size: 45px;
 }
 
-.capture-container {
-  width: 1856px;
-  height: 1040px;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-
-.left-player-container, .right-player-container {
-  width: 916px;
-  height: 100%;
-  position: relative;
-}
-
-.player-info {
-  position: relative;
-  width: 100%;
-}
-
-.player-info-name {
-  position: relative;
-  width: 100%;
-  height: 70px;
-  background-color: rgba(27, 22, 27, 0.637);
-}
-
-.player-info-description {
-  position: relative;
-  margin-top: 5px;
-  width: 100%;
-  height: 35px;
-  background-color: rgba(27, 22, 27, 0.637);
-}
-
-.left-player-name::before {
-  position: absolute;
-  top: -2px;
-  left: -48px;
-  width: 40px;
-  height: 40px;
-  content: url("../resources/images/elk.png");
-}
-
-.right-player-name::before {
-  position: absolute;
-  top: -6px;
-  left: -48px;
-  width: 45px;
-  height: 40px;
-  content: url("../resources/images/duck.png");
-}
-
-.left-player-name {
-  margin-top: 8px;
-  margin-left: 55px;
-}
-
-.right-player-name{
-  margin-top: 8px;
-  margin-left: 65px;
-}
-
-.left-player-description, .right-player-description {
-  margin-top: 8px;
-  margin-left: 10px;
-}
-
-.player-display {
-  position: relative;
-  margin-top: 10px;
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  background-color: rgba(27, 22, 27, 0.637);
-}
-
-.left-player-base, .right-player-base {
-  position: relative;
-  margin-top: 10px;
-  width: 100%;
-  height: 486px;
-}
-
-.left-player-base {
-  background-image: url("../resources/images/left-base.png");
-}
-
-.right-player-base {
-  background-image: url("../resources/images/right-base.png");
-}
-
-.score-board {
-  font-family: NoitaFont;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  margin-bottom: 40px;
-  width: 500px;
-  font-size: 150px;
-  text-align: center;
-}
-
-.score-board-point {
-  position: relative;
-  font-family: inherit;
+.medium-font-size {
+  font-size: 30px;
 }

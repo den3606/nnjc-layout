@@ -1,0 +1,99 @@
+#noita-nemesis-waiting-video {
+  width: 1920px;
+  height: 1080px;
+  position: absolute;
+  aspect-ratio: 16/9;
+  z-index: -1;
+  background-image: url(../resources/images/sample-background.png);
+}
+
+.schedule-container {
+  position:absolute;
+  top: 0;
+  left: 50px;
+  bottom: 0;
+  margin: auto;
+  height: 900px;
+}
+
+.schedule-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  width: 1100px;
+  height: inherit;
+}
+
+.schedule-box-title {
+  width: 90%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.schedule-box-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 1100px;
+  height: 90%;
+}
+
+.schedule {
+  width: 90%;
+  height: 150px;
+}
+
+.schedule-title {
+  margin: 0;
+  margin-bottom: -1px;
+  width: fit-content;
+  padding: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.schedule-content {
+  height: 100px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+}
+
+.schedule p {
+  display: inline-block;
+  margin: 0;
+}
+
+.right-container {
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  right: 100px;
+  margin: auto;
+  width: 600px;
+  height: 900px;
+}
+
+.timer-container {
+  margin-left: 50px;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-container p {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 160px;
+  font-family: "TurretRoad-EB";
+}

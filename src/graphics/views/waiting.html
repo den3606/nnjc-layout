@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer type="module" src="/src/waiting/index.ts"></script>
+</head>
+
+<body>
+  <video autoplay muted loop id="noita-nemesis-waiting-video">
+    <source src="/src/resources/videos/noita-nemesis-waiting.mp4" type="video/mp4">
+  </video>
+  <div class="schedule-container animate__animated animate__fadeInDown">
+    <div class="schedule-box noita-border">
+      <div class="schedule-box-title">
+        <h1 id="schedule-box-title" class="noita-text big-font-size">
+          タイトル
+        </h1>
+      </div>
+      <div class="schedule-box-list noita-border">
+        <div class="schedule">
+          <h2 id="first-schedule-title" class="schedule-title medium-font-size noita-border">スケジュールタイトル1</h2>
+          <div id="first-schedule-contents" class="schedule-content noita-border">
+            <p class="medium-font-size">スケジュール1</p>
+            <p class="medium-font-size">スケジュール1</p>
+          </div>
+        </div>
+        <div class="schedule">
+          <h2 id="second-schedule-title" class="schedule-title medium-font-size noita-border">スケジュールタイトル1</h2>
+          <div id="second-schedule-contents" class="schedule-content noita-border">
+            <p class="medium-font-size">スケジュール1</p>
+            <p class="medium-font-size">スケジュール1</p>
+          </div>
+        </div>
+        <div class="schedule">
+          <h2 id="third-schedule-title" class="schedule-title medium-font-size noita-border">スケジュールタイトル1</h2>
+          <div id="third-schedule-contents" class="schedule-content noita-border">
+            <p class="medium-font-size">スケジュール1</p>
+            <p class="medium-font-size">スケジュール1</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right-container animate__animated animate__slideInDown">
+    <div id="current-time-animation" class="timer-container noita-border animate__animated animate__fadeIn">
+      <p id="current-time" class="noita-text"></p>
+    </div>
+  </div>
+</body>
+
+</html>

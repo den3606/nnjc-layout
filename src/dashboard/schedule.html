@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer type="module" src="src/schedule.ts"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container my-3">
+    <div class="mt-2">
+      <label>1段目</label>
+      <select id="first-line" name="first-line" class="form-select" aria-label="Default select">
+        <option value="" selected></option>
+      </select>
+    </div>
+    <div class="mt-2">
+      <label>2段目</label>
+      <select id="second-line" name="second-line" class="form-select" aria-label="Default select">
+        <option value="" selected></option>
+      </select>
+    </div>
+    <div class="mt-2">
+      <label>3段目</label>
+      <select id="third-line" name="third-line" class="form-select" aria-label="Default select">
+        <option value="" selected></option>
+      </select>
+    </div>
+    <div class="mt-4">
+      <button id="schedule-back" type="button" class="btn btn-outline-primary">スケジュールを1つ戻す</button>
+      <div class="mt-1">
+      <button id="schedule-next" type="button" class="btn btn-outline-primary">スケジュールを1つ進める</button>
+      <div class="mt-1"></div>
+      <button id="load-schedule-list" type="button" class="btn btn-outline-secondary">スケジュールをロードする</button>
+    </div>
+  </div>
+
+</body>
+
+</html>

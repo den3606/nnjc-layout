@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "NoitaFont";
+  src: url("../resources/fonts/NOITABLACKLETTER-REGULAR.TTF");
+}
+
+@font-face {
+  font-family: "PixelMplus12RegularFont";
+  src: url("../resources/fonts/PixelMplus12-Regular.ttf");
+}
+
+body {
+  width: 1920px;
+  height: 1080px;
+  background-image: url("../resources/images/background.png");
+  overflow: hidden;
+}
+
+* {
+  color: white;
+  position: absolute;
+  font-family: PixelMplus12RegularFont;
+}
+
+.noita-border {
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(140, 121, 95);
+  box-sizing: border-box;
+}
+
+.noita-text {
+  font-weight: bold;
+  background: linear-gradient(#ffd170, #ac4b5d);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* vertical-align: top; */
+}
+
+.big-font-size {
+  font-size: 45px;
+}
+
+.capture-container {
+  width: 1856px;
+  height: 1040px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.left-player-container, .right-player-container {
+  width: 916px;
+  height: 100%;
+  position: relative;
+}
+
+.player-info {
+  position: relative;
+  width: 100%;
+}
+
+.player-info-name {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(27, 22, 27, 0.637);
+}
+
+.player-info-description {
+  position: relative;
+  margin-top: 5px;
+  width: 100%;
+  height: 35px;
+  background-color: rgba(27, 22, 27, 0.637);
+}
+
+.left-player-name::before {
+  position: absolute;
+  top: -2px;
+  left: -48px;
+  width: 40px;
+  height: 40px;
+  content: url("../resources/images/elk.png");
+}
+
+.right-player-name::before {
+  position: absolute;
+  top: -6px;
+  left: -48px;
+  width: 45px;
+  height: 40px;
+  content: url("../resources/images/duck.png");
+}
+
+.left-player-name {
+  margin-top: 8px;
+  margin-left: 55px;
+}
+
+.right-player-name{
+  margin-top: 8px;
+  margin-left: 65px;
+}
+
+.left-player-description, .right-player-description {
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+.player-display {
+  position: relative;
+  margin-top: 10px;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  background-color: rgba(27, 22, 27, 0.637);
+}
+
+.left-player-base, .right-player-base {
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+  height: 486px;
+}
+
+.left-player-base {
+  background-image: url("../resources/images/left-base.png");
+}
+
+.right-player-base {
+  background-image: url("../resources/images/right-base.png");
+}
+
+.score-board {
+  font-family: NoitaFont;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  margin-bottom: 40px;
+  width: 500px;
+  font-size: 150px;
+  text-align: center;
+}
+
+.score-board-point {
+  position: relative;
+  font-family: inherit;
+}

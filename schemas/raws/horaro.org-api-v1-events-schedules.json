@@ -1,0 +1,317 @@
+{
+  "data": [
+    {
+      "id": "3e11m3fen8bbhh7af2",
+      "name": "Noita Nemesis Japan Cup #6",
+      "slug": "6th",
+      "timezone": "Asia/Tokyo",
+      "start": "2022-08-27T13:00:00+09:00",
+      "start_t": 1661572800,
+      "website": "https://tonamel.com/competition/2K8Bf",
+      "twitter": "denpunn_3606",
+      "twitch": "den3606",
+      "description": null,
+      "setup": "PT10M",
+      "setup_t": 600,
+      "updated": "2022-08-27T04:44:23Z",
+      "link": "https://horaro.org/nnjc/6th",
+      "columns": [
+        "Description"
+      ],
+      "items": [
+        {
+          "length": "PT10M",
+          "length_t": 600,
+          "scheduled": "2022-08-27T13:00:00+09:00",
+          "scheduled_t": 1661572800,
+          "data": [
+            "Opening"
+          ]
+        },
+        {
+          "length": "PT30M",
+          "length_t": 1800,
+          "scheduled": "2022-08-27T13:20:00+09:00",
+          "scheduled_t": 1661574000,
+          "data": [
+            "[x2] Battle royale"
+          ]
+        },
+        {
+          "length": "PT35M",
+          "length_t": 2100,
+          "scheduled": "2022-08-27T14:00:00+09:00",
+          "scheduled_t": 1661576400,
+          "data": [
+            "[BO3] Winner Side 1-1"
+          ]
+        },
+        {
+          "length": "PT35M",
+          "length_t": 2100,
+          "scheduled": "2022-08-27T14:45:00+09:00",
+          "scheduled_t": 1661579100,
+          "data": [
+            "[BO3] Winner Side 1-2"
+          ]
+        },
+        {
+          "length": "PT35M",
+          "length_t": 2100,
+          "scheduled": "2022-08-27T15:30:00+09:00",
+          "scheduled_t": 1661581800,
+          "data": [
+            "[BO3] Winner Side 2-1"
+          ]
+        },
+        {
+          "length": "PT35M",
+          "length_t": 2100,
+          "scheduled": "2022-08-27T16:15:00+09:00",
+          "scheduled_t": 1661584500,
+          "data": [
+            "[BO3] Winner Side 3-1"
+          ]
+        },
+        {
+          "length": "PT15M",
+          "length_t": 900,
+          "scheduled": "2022-08-27T17:00:00+09:00",
+          "scheduled_t": 1661587200,
+          "data": [
+            "[BO1] Losers Side 1-1"
+          ]
+        },
+        {
+          "length": "PT15M",
+          "length_t": 900,
+          "scheduled": "2022-08-27T17:25:00+09:00",
+          "scheduled_t": 1661588700,
+          "data": [
+            "[BO1] Losers Side 2-1"
+          ]
+        },
+        {
+          "length": "PT25M",
+          "length_t": 1500,
+          "scheduled": "2022-08-27T17:50:00+09:00",
+          "scheduled_t": 1661590200,
+          "data": [
+            "[BO3] Losers Side 3-1"
+          ]
+        },
+        {
+          "length": "PT45M",
+          "length_t": 2700,
+          "scheduled": "2022-08-27T18:25:00+09:00",
+          "scheduled_t": 1661592300,
+          "data": [
+            "[BO5] Grand Final"
+          ]
+        },
+        {
+          "length": "PT10M",
+          "length_t": 600,
+          "scheduled": "2022-08-27T19:20:00+09:00",
+          "scheduled_t": 1661595600,
+          "data": [
+            "Interview"
+          ]
+        },
+        {
+          "length": "PT05M",
+          "length_t": 300,
+          "scheduled": "2022-08-27T19:40:00+09:00",
+          "scheduled_t": 1661596800,
+          "data": [
+            "Ending"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "rel": "self",
+          "uri": "https://horaro.org/-/api/v1/schedules/3e11m3fen8bbhh7af2"
+        },
+        {
+          "rel": "event",
+          "uri": "https://horaro.org/-/api/v1/events/3650trf20vb98fb4a9"
+        },
+        {
+          "rel": "ticker",
+          "uri": "https://horaro.org/-/api/v1/schedules/3e11m3fen8bbhh7af2/ticker"
+        }
+      ]
+    },
+    {
+      "id": "5111xy461u70jm7a79",
+      "name": "Noita Nemesis Japan Cup #7",
+      "slug": "7th",
+      "timezone": "Asia/Tokyo",
+      "start": "2022-09-24T13:00:00+09:00",
+      "start_t": 1663992000,
+      "website": "https://tonamel.com/competition/BYu2M",
+      "twitter": "denpunn_3606",
+      "twitch": "den3606",
+      "description": null,
+      "setup": "PT10M",
+      "setup_t": 600,
+      "updated": "2022-09-23T01:53:28Z",
+      "link": "https://horaro.org/nnjc/7th",
+      "columns": [
+        "Description"
+      ],
+      "items": [
+        {
+          "length": "PT05M",
+          "length_t": 300,
+          "scheduled": "2022-09-24T13:00:00+09:00",
+          "scheduled_t": 1663992000,
+          "data": [
+            "Opening"
+          ]
+        },
+        {
+          "length": "PT30M",
+          "length_t": 1800,
+          "scheduled": "2022-09-24T13:15:00+09:00",
+          "scheduled_t": 1663992900,
+          "data": [
+            "[x2] Battle royale"
+          ]
+        },
+        {
+          "length": "PT35M",
+          "length_t": 2100,
+          "scheduled": "2022-09-24T13:55:00+09:00",
+          "scheduled_t": 1663995300,
+          "data": [
+            "[BO3] Winner Side 1-1"
+          ]
+        },
+        {
+          "length": "PT35M",
+          "length_t": 2100,
+          "scheduled": "2022-09-24T14:40:00+09:00",
+          "scheduled_t": 1663998000,
+          "data": [
+            "[BO3] Winner Side 1-2"
+          ]
+        },
+        {
+          "length": "PT35M",
+          "length_t": 2100,
+          "scheduled": "2022-09-24T15:25:00+09:00",
+          "scheduled_t": 1664000700,
+          "data": [
+            "[BO3] Winner Side 2-1"
+          ]
+        },
+        {
+          "length": "PT30M",
+          "length_t": 1800,
+          "scheduled": "2022-09-24T16:10:00+09:00",
+          "scheduled_t": 1664003400,
+          "data": [
+            "[BO3] Winner Side 2-2"
+          ]
+        },
+        {
+          "length": "PT35M",
+          "length_t": 2100,
+          "scheduled": "2022-09-24T16:50:00+09:00",
+          "scheduled_t": 1664005800,
+          "data": [
+            "[BO3] Winner Side 3-1"
+          ]
+        },
+        {
+          "length": "PT15M",
+          "length_t": 900,
+          "scheduled": "2022-09-24T17:35:00+09:00",
+          "scheduled_t": 1664008500,
+          "data": [
+            "[BO1] Losers Side 1-1"
+          ]
+        },
+        {
+          "length": "PT15M",
+          "length_t": 900,
+          "scheduled": "2022-09-24T18:00:00+09:00",
+          "scheduled_t": 1664010000,
+          "data": [
+            "[BO1] Losers Side 1-2"
+          ]
+        },
+        {
+          "length": "PT15M",
+          "length_t": 900,
+          "scheduled": "2022-09-24T18:25:00+09:00",
+          "scheduled_t": 1664011500,
+          "data": [
+            "[BO1] Losers Side 2-1"
+          ]
+        },
+        {
+          "length": "PT25M",
+          "length_t": 1500,
+          "scheduled": "2022-09-24T18:50:00+09:00",
+          "scheduled_t": 1664013000,
+          "data": [
+            "[BO3] Losers Side 3-1"
+          ]
+        },
+        {
+          "length": "PT45M",
+          "length_t": 2700,
+          "scheduled": "2022-09-24T19:25:00+09:00",
+          "scheduled_t": 1664015100,
+          "data": [
+            "[BO5] Grand Final"
+          ]
+        },
+        {
+          "length": "PT30M",
+          "length_t": 1800,
+          "scheduled": "2022-09-24T20:20:00+09:00",
+          "scheduled_t": 1664018400,
+          "data": [
+            "[BO3] Grand Final Reset"
+          ]
+        },
+        {
+          "length": "PT10M",
+          "length_t": 600,
+          "scheduled": "2022-09-24T21:00:00+09:00",
+          "scheduled_t": 1664020800,
+          "data": [
+            "Interview"
+          ]
+        },
+        {
+          "length": "PT05M",
+          "length_t": 300,
+          "scheduled": "2022-09-24T21:20:00+09:00",
+          "scheduled_t": 1664022000,
+          "data": [
+            "Ending"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "rel": "self",
+          "uri": "https://horaro.org/-/api/v1/schedules/5111xy461u70jm7a79"
+        },
+        {
+          "rel": "event",
+          "uri": "https://horaro.org/-/api/v1/events/3650trf20vb98fb4a9"
+        },
+        {
+          "rel": "ticker",
+          "uri": "https://horaro.org/-/api/v1/schedules/5111xy461u70jm7a79/ticker"
+        }
+      ]
+    }
+  ]
+}

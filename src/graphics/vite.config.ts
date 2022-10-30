@@ -1,14 +1,18 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
+import crossOriginIsolation from 'vite-plugin-cross-origin-isolation';
 
 export default defineConfig({
   base: './',
+  plugins: [crossOriginIsolation()],
   build: {
     outDir: '../../graphics',
-    emptyOutDir : true,
+    target: 'esnext',
+    emptyOutDir: true,
     rollupOptions: {
       input: {
-        index: resolve(__dirname, 'index.html')
+        battle: resolve(__dirname, 'views/battle.html'),
+        waiting: resolve(__dirname, 'views/waiting.html')
       }
     }
   },

@@ -15,7 +15,7 @@
     "watch": "run-p watch:*",
     "watch:dashboard": "(cd src/dashboard && npx vite build --watch)",
     "watch:graphics": "(cd src/graphics && npx vite build --watch)",
-    "watch:extension": "(cd src/extension && npx vite build --watch)"
+    "watch:extension": "(cd src/extension && npm run watch)"
   },
   "author": {
     "name": "den3606",
@@ -48,11 +48,23 @@
         "width": 2,
         "file": "score.html",
         "headerColor": "#525F78"
+      },
+      {
+        "name": "Schedule",
+        "title": "Schedule",
+        "width": 4,
+        "file": "schedule.html",
+        "headerColor": "#525F78"
       }
     ],
     "graphics": [
       {
-        "file": "index.html",
+        "file": "views/battle.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "views/waiting.html",
         "width": 1920,
         "height": 1080
       }
@@ -74,6 +86,8 @@
     "@typescript-eslint/parser": "^5.38.0",
     "eslint": "^8.23.1",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "generate-schema": "^2.6.0",
+    "json-schema-to-typescript": "^11.0.2"
   }
 }
