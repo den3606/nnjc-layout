@@ -14,9 +14,6 @@ eventScheduleReplicant.on('change', (eventSchedules: HoraroOrgApiV1EventsSchedul
     console.error('対象のイベントデータがありません');
     return;
   }
-  const newestSchedule = eventSchedules.data[eventSchedules.data.length - 1];
-  console.log(newestSchedule.items);
-
 });
 
 setInterval(() => {

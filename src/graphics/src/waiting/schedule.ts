@@ -4,6 +4,8 @@ export function setupSchedule() {
     content: string
   }
 
+  const scheduleTitleElement = document.querySelector<HTMLHeadingElement>('#schedule-box-title');
+  if (!scheduleTitleElement) { throw new Error('selector not found'); }
   const firstScheduleTitleElement = document.querySelector<HTMLSelectElement>('#first-schedule-title');
   if (!firstScheduleTitleElement) { throw new Error('selector not found'); }
   const secondScheduleTitleElement = document.querySelector<HTMLSelectElement>('#second-schedule-title');
@@ -16,14 +18,22 @@ export function setupSchedule() {
   if (!secondScheduleContentsElement) { throw new Error('selector not found'); }
   const thirdScheduleContentsElement = document.querySelector<HTMLSelectElement>('#third-schedule-contents');
   if (!thirdScheduleContentsElement) { throw new Error('selector not found'); }
+  const scheduleBoxTitleElement = document.querySelector<HTMLSelectElement>('#schedule-box-title');
+  if (!scheduleBoxTitleElement) { throw new Error('selector not found'); }
 
 
+  const scheduleTitleReplicant = nodecg.Replicant<string>('scheduleTitle');
   const firstLineReplicant = nodecg.Replicant<Schedule>('firstLineReplicant');
   const secondLineReplicant = nodecg.Replicant<Schedule>('secondLineReplicant');
   const thirdLineReplicant = nodecg.Replicant<Schedule>('thirdLineReplicant');
 
+
+
+  // TODO: タイトルもJSONデータを参照するようにする
+  scheduleTitleReplicant.on('change', (title: string) => {
+    scheduleTitleElement.innerHTML = title || '';
+  });
   firstLineReplicant.on('change', (schedule: Schedule) => {
-    console.log(firstScheduleTitleElement);
     firstScheduleTitleElement.innerText = schedule?.title || '';
     firstScheduleContentsElement.innerHTML = '';
     const pElement = <HTMLParagraphElement>document.createElement('p');

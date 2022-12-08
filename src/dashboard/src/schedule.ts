@@ -12,7 +12,8 @@ const thirdLineElement = document.querySelector<HTMLSelectElement>('#third-line'
 if (thirdLineElement == null) { throw new Error('selector not found'); }
 const scheduleNextElement = document.querySelector<HTMLSelectElement>('#schedule-next');
 if (scheduleNextElement == null) { throw new Error('selector not found'); }
-
+const scheduleBackElement = document.querySelector<HTMLSelectElement>('#schedule-back');
+if (scheduleBackElement == null) { throw new Error('selector not found'); }
 
 type Schedule = {
   title: string,
@@ -43,6 +44,8 @@ loadScheduleListElement.addEventListener('click', async () => {
 
   // 表示用データに加工
   const newestSchedule = eventSchedules.data[eventSchedules.data.length - 1];
+  const scheduleTitle = newestSchedule.name;
+  nodecg.Replicant<string>('scheduleTitle').value = scheduleTitle;
   const scheduleList = newestSchedule.items.map(item => {
     const schedule: Schedule = {
       title: dayjs(item.scheduled).format('HH:mm:ss') + '～',
@@ -100,6 +103,16 @@ scheduleNextElement.addEventListener('click', async () => {
   firstLineElement.selectedIndex = firstLineElement.selectedIndex + 1;
   secondLineElement.selectedIndex = secondLineElement.selectedIndex + 1;
   thirdLineElement.selectedIndex = thirdLineElement.selectedIndex + 1;
+  firstLineElement.dispatchEvent(event);
+  secondLineElement.dispatchEvent(event);
+  thirdLineElement.dispatchEvent(event);
+});
+
+scheduleBackElement.addEventListener('click', async () => {
+  const event = new Event('change');
+  firstLineElement.selectedIndex = firstLineElement.selectedIndex + -1;
+  secondLineElement.selectedIndex = secondLineElement.selectedIndex + -1;
+  thirdLineElement.selectedIndex = thirdLineElement.selectedIndex + -1;
   firstLineElement.dispatchEvent(event);
   secondLineElement.dispatchEvent(event);
   thirdLineElement.dispatchEvent(event);
